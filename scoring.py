@@ -48,7 +48,8 @@ def compute_scores(questions: List[dict], answers: Dict[str, str]) -> ScoreResul
         for f, w in q.get("func_w", {}).items():
             func_max[f] += 5 * w
         for t, w in q.get("trait_w", {}).items():
-            trait_max[t] += 5 * w
+    if t in trait_max:
+        trait_max[t] += 5 * w
         for d, w in q.get("level_w", {}).items():
             level_max[d] += 5 * w
 
@@ -59,7 +60,8 @@ def compute_scores(questions: List[dict], answers: Dict[str, str]) -> ScoreResul
         for f, w in q.get("func_w", {}).items():
             func_raw[f] += val * w
         for t, w in q.get("trait_w", {}).items():
-            trait_raw[t] += val * w
+    if t in trait_raw:
+        trait_raw[t] += val * w
         for d, w in q.get("level_w", {}).items():
             level_raw[d] += val * w
 
