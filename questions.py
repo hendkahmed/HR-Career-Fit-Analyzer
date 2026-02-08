@@ -222,7 +222,7 @@ QUESTIONS = [
         "id": "Q25",
         "text": "I can coach others and give feedback that helps them improve.",
         "func_w": {"Learning & Development": 2, "Performance Management": 2},
-        "trait_w": {"People-centric": 2, "Leadership": 0},
+        "trait_w": {"People-centric": 2},
         "level_w": {"Leadership": 2}
     },
 
